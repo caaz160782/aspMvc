@@ -28,3 +28,4 @@
 /home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/AspMvcNet.pdb
 /home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/AspMvcNet.genruntimeconfig.cache
 /home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/ref/AspMvcNet.dll
+/home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/AspMvcNet.sourcelink.json
