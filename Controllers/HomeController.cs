@@ -18,6 +18,13 @@ public class HomeController : Controller
         return View();
     }
 
+    [Route("/Example")]
+    public IActionResult Example()
+    {
+        return View();
+    }
+
+
     [Route("/rutasExp")]
     public IActionResult rutasExp()
     {
