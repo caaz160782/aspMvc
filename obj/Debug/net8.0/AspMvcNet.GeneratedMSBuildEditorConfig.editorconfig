@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/antonio/develop/git/net/AspMvcNet
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/antonio/develop/git/net/AspMvcNet/Views/Error/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvRXJyb3I0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/antonio/develop/git/net/AspMvcNet/Views/Home/Example.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FeGFtcGxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

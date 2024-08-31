@@ -23,5 +23,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+//error 404
+app.UseStatusCodePagesWithReExecute("/error/{0}");
 
 app.Run();
