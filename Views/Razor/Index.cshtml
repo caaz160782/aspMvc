@@ -1,0 +1,120 @@
+@{
+    ViewData["Title"] = "Razor";
+}
+
+<div class="text-center">
+    <h1 >Razor</h1>    
+</div>
+<div >
+    <h5 >Parametros desde controlador</h5>
+        <ul>
+            <li>ViewData</li>
+            <li>id = @ViewData["id"]</li>
+            <li>name = @ViewData["name"]</li>             
+        </ul>
+         <ul>
+            <li>ViewBag</li>
+            <li>id = @ViewBag.id</li>
+            <li>Equipo = @ViewBag.TeamName</li>             
+        </ul>
+</div>
+<hr>
+<div>
+    <h5 >Fecha Actual</h5>
+       <p>@DateTime.Now </p> 
+    <h5 >operacion de fechas semana anterior</h5>
+    <p>@(DateTime.Now - TimeSpan.FromDays(7)) </p> 
+</div>
+<hr>
+<div>
+    <h5 >Codificacion de expresiones</h5>
+       <p>@Html.Raw("<strong> test </strong>")</p>     
+</div>
+<hr>
+<div>
+    <h5 >Bloques codigo</h5>
+      @{
+        var nombre ="PEdro ";
+        var suma1=5;
+        var suma2=10;
+        var res= suma1+suma2;      
+      }   
+      <p>suma @nombre</p>    
+      <p>@suma1 + @suma2 = @res</p>    
+</div>
+<hr>
+<div>
+    <h5 >if</h5>
+      @{
+        var edad =15;       
+      }   
+      @if(@edad >= 18){
+      <p>es mayor de edad @edad</p>    
+         }else{
+            <p>no es mayor de edad @edad</p>    
+         }     
+</div>
+<hr>
+<div>
+    <h5 >switch</h5>
+      @{
+        var status = "active";       
+      }
+      @switch (status)
+            {
+                case "active":                
+                   <p>activo</p>    
+                 break;  
+
+                case "inactive":
+                    
+                    <p>inactivo</p>    
+                break;      
+
+                case "pending":                    
+                    <p>pendiente</p>    
+                break;      
+
+                default:                    
+                    <p>default</p>    
+                break;      
+            }       
+</div>
+<hr>
+<div>
+    <h5 >while</h5>
+      @{
+        var limit =5;   
+        var counter =0;    
+      }   
+        @while (counter <= limit)
+            {
+                 <p>count = @counter</p>  
+                counter++;
+            }
+</div>
+<hr>
+<div>
+    <h5 >For</h5>
+    @{
+        var limitFor =5;           
+      }   
+        @for (var counterFor=1 ; counterFor <= limitFor; counterFor++)
+            {
+            <p>count = @counterFor</p>  
+              
+            }
+</div>
+<hr>
+<div>
+    <h5>For each</h5>
+    @{
+        var paises= new string[]{"Mexico","Colombia","Brasil","EUA"};           
+      }   
+       <ul>
+      @foreach (var pais in paises)
+    {
+        <li>@pais</li>
+    }
+</ul>
+</div>
