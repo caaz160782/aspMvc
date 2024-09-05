@@ -29,3 +29,12 @@
 /home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/AspMvcNet.genruntimeconfig.cache
 /home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/ref/AspMvcNet.dll
 /home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/AspMvcNet.sourcelink.json
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/ClosedXML.dll
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/DocumentFormat.OpenXml.dll
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/ExcelNumberFormat.dll
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/Irony.dll
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/SixLabors.Fonts.dll
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/System.IO.Packaging.dll
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/XLParser.dll
+/home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/AspMvcNet.csproj.AssemblyReference.cache
+/home/antonio/develop/git/net/AspMvcNet/obj/Debug/net8.0/AspMvcNet.csproj.Up2Date
