@@ -32,7 +32,7 @@ public class UtilitiesController : Controller
        var nameFile=$"reporte_{timeStamp}.xlsx";
        return GenerarExcel(nameFile,categorias);
     }
-  private FileResult GenerarExcel(string nameFile, IEnumerable<Categoria> categorias){
+    private FileResult GenerarExcel(string nameFile, IEnumerable<Categoria> categorias){
     DataTable dataTable = new DataTable("categorias");
     dataTable.Columns.AddRange(
         new DataColumn[]{
