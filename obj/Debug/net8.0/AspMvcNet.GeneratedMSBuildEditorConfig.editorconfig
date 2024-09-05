@@ -50,6 +50,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/antonio/develop/git/net/AspMvcNet/Views/Utilities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGl0aWVzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/antonio/develop/git/net/AspMvcNet/Views/Utilities/UtilidadesExample.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGl0aWVzL1V0aWxpZGFkZXNFeGFtcGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/antonio/develop/git/net/AspMvcNet/Views/Utilities/UtilidadesExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGl0aWVzL1V0aWxpZGFkZXNFeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/antonio/develop/git/net/AspMvcNet/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
