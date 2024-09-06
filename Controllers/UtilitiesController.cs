@@ -4,6 +4,8 @@ using AspMvcNet.Models;
 //excel
 using ClosedXML.Excel;
 using System.Data;
+//email
+using System.Net.Mail;
 
 namespace AspMvcNet.Controllers;
 
@@ -24,6 +26,25 @@ public class UtilitiesController : Controller
     {     
         ViewBag.Text="www.google.com";
         return View();
+    }
+    [Route("/Utilities/Email")]
+    public IActionResult UtilidadesEmail()
+    {     
+        MailMessage mail = new MailMessage();
+        mail.To.Add("caaz160782@gmail.com");
+        mail.From= new MailAddress("caaz160782+2515@gmail.com");
+        mail.Subject= "que paso";
+        string Body="<h1>varitas </h1> es el cuerpo";
+        mail.Body= Body;
+        mail.IsBodyHtml =true;
+        SmtpClient smtp = new SmtpClient();
+        smtp.Host = "sandbox.smtp.mailtrap.io";
+        smtp.Port = 587;
+        smtp.UseDefaultCredentials =false;
+        smtp.Credentials= new System.Net.NetworkCredential("ac8332c15a781b", "8ba79976d805d0");
+        smtp.EnableSsl = true;
+        smtp.Send(mail);
+        return Content("mail enviado");
     }
     private List<Categoria> categorias = new List<Categoria>{
         new Categoria {Id= 1, Nombre ="Categoria 1" ,Slug="cat-1"},
