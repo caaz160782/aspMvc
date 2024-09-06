@@ -19,6 +19,12 @@ public class UtilitiesController : Controller
     {     
         return View();
     }
+    [Route("/Utilities/QR")]
+    public IActionResult UtilidadesQr()
+    {     
+        ViewBag.Text="www.google.com";
+        return View();
+    }
     private List<Categoria> categorias = new List<Categoria>{
         new Categoria {Id= 1, Nombre ="Categoria 1" ,Slug="cat-1"},
         new Categoria {Id= 2, Nombre ="Categoria 2" ,Slug="cat-2"},

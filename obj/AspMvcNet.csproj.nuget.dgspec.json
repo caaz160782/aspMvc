@@ -46,6 +46,14 @@
             "ClosedXML": {
               "target": "Package",
               "version": "[0.102.3, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.8, )"
             }
           },
           "imports": [
