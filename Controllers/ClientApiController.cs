@@ -14,7 +14,8 @@ public class ClientApiController : Controller
     public string _token;
 
     public ClientApiController(){
-        _token="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzYsImlhdCI6MTcyNjAyNTgwMCwiZXhwIjoxNzI4NjE3ODAwfQ.ZhQYNm5ggBraaGsqDXXHdwBfkTKsu2AfW-7JRj3KtHQ";
+        //se elimina para subirlo a git
+        // _token="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzYsImlhdCI6MTcyNjAyNTgwMCwiZXhwIjoxNzI4NjE3ODAwfQ.ZhQYNm5ggBraaGsqDXXHdwBfkTKsu2AfW-7JRj3KtHQ";
     }
 
     [Route("/ClientAPI")]   
@@ -76,10 +77,11 @@ public class ClientApiController : Controller
         HttpClient client = new HttpClient();
         client.DefaultRequestHeaders.Add("Authorization",_token) ;
         if(ModelState.IsValid){
-           var data= new {
+          var data= new {
             nombre =model.Nombre
            };        
-          var result =await client.PutAsJsonAsync("https://www.api.tamila.cl/api/categorias"+model.Id, data);          
+          var result =await client.PutAsJsonAsync("https://www.api.tamila.cl/api/categorias/"+model.Id, data);
+          return RedirectToAction(nameof(Edit));
         }
         var result1 =await client.GetAsync("https://www.api.tamila.cl/api/categorias/"+model.Id);
         string resultBody= await result1.Content.ReadAsStringAsync();
@@ -91,4 +93,16 @@ public class ClientApiController : Controller
         return View();
     }
  
+
+     [Route("/ClientAPI/delete/{id}")]   
+     public async Task<IActionResult> Delete(int id)
+    {
+        if(id == null){
+            return NotFound();
+        }
+        HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Authorization",_token) ;
+        var result =await client.DeleteAsync("https://www.api.tamila.cl/api/categorias/"+id);
+         return RedirectToAction(nameof(Index));
+    }
 }
