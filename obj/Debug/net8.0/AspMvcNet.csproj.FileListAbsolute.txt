@@ -42,3 +42,4 @@
 /home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/QRCoder.dll
 /home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/System.Drawing.Common.dll
 /home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/antonio/develop/git/net/AspMvcNet/bin/Debug/net8.0/Newtonsoft.Json.dll

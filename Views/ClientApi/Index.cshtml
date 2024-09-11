@@ -1,0 +1,44 @@
+@model IEnumerable<AspMvcNet.Models.Categoria>
+@{
+    ViewData["Title"] = "Api";
+}
+<div class="text-center">
+    <h1 >API</h1>    
+</div>
+<hr>
+<div class="row"> 
+    <p class="d-flex justify-content-end">
+        <a  asp-controller="ClientAPI" asp-action="Add" class="btn btn-success">
+             <i class="fas fa-plus"> Crear  </i>
+        </a>
+    </p>
+</div>
+<hr>
+<div class="row"> 
+ <div class="table-responsive">
+     <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>SLUG</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var dato in Model){
+                 <tr>
+                    <td> @dato.Id</td>
+                    <td> @dato.Nombre</td>
+                    <td> @dato.Slug</td>
+                    <td> <a  asp-controller="ClientAPI" asp-action="Edit" asp-route-id="@dato.Id">
+                         <i class="fas fa-edit"></i>Edit
+                        </a>                        
+                    </td>
+                 </tr>                  
+            }        
+        </tbody>
+     </table>
+
+ </div>
+</div>
