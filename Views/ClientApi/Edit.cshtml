@@ -1,0 +1,33 @@
+@model AspMvcNet.Models.Categoria
+@{ ViewData["Title"] = "Edita"; }
+<div class="text-center">
+    <h1 >API</h1>    
+</div>
+<hr>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a asp-controller="home" asp-action="index">Inicio</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a asp-controller="ClientAPI" asp-action="index">Table info categoria</a>
+        </li>
+        <li class="breadcrumb-item active">
+            Editar
+        </li>
+    </ol>
+</nav>
+<h1> Edita form</h1>
+<div class="row">
+ <form asp-controller="ClientAPI" asp-action="Edit" method="POST">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" placeholder="Ingresa el Nombre"/>
+    </div>
+    <hr/>
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-primary ">
+        <i class="fas fas-plus"></i>Editar
+    </button>
+ </form>
+</div>
