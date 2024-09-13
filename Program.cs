@@ -1,4 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using AspMvcNet.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+//configuramos la conexion a sql server}
+var conexionString = builder.Configuration.GetConnectionString("DefaultConnection")??
+throw new InvalidOperationException("error alc onectarse a la bd");
+
+builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer(conexionString));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
