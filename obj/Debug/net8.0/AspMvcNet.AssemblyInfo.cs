@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AspMvcNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+daf1b0a70541cbc6f81f99ed76e76f062d039d6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40751ca9b8fbf73ae9ddd82cb46b8353e34455d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("AspMvcNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AspMvcNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

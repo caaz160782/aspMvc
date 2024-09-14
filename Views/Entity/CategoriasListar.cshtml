@@ -1,0 +1,95 @@
+@model IEnumerable<AspMvcNet.Models.Categoria>
+@{
+    ViewData["Title"] = "Entity";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a asp-controller="home" asp-action="index">Inicio</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a asp-controller="entity" asp-action="index">Entity</a>
+        </li>
+        <li class="breadcrumb-item">
+            <li> <a  asp-controller="entity" asp-action="CategoriasListar"> Categorias    </a></li>            
+        </li>
+    </ol>
+</nav>     
+
+
+
+<div class="text-center">
+    <h2>CategoriasListar</h2>
+</div>
+ <div class="row"> 
+    <p class="d-flex justify-content-end">
+        <a  asp-controller="entity" asp-action="CategoriasAdd" class="btn btn-success">
+             <i class="fas fa-plus"> Crear  </i>
+        </a>
+    </p>
+</div>     
+<hr>
+@if(Model.Count()>0)
+{
+<div class="row"> 
+ <div class="table-responsive">
+     <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>SLUG</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var dato in Model){
+                 <tr>
+                    <td> @dato.Id</td>
+                    <td> @dato.Nombre</td>
+                    <td> @dato.Slug</td>
+                    <td> <a  asp-controller="entity" asp-action="CategoriaEdit" asp-route-id="@dato.Id">
+                         <i class="fas fa-edit"></i>Edit
+                        </a>
+                                /
+                        <a href="javascript:;" class="delete-link" data-id="@dato.Id">
+                                                 <i class="fas fa-edit"></i> Delete
+                        </a>                     
+                    </td>
+                 </tr>                  
+            }        
+        </tbody>
+     </table>
+
+ </div>
+</div>
+}else{
+    <p>no hay registros</p>
+}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteLinks = document.querySelectorAll('.delete-link');
+
+        deleteLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                const clientId = this.getAttribute('data-id');
+                
+                // SweetAlert confirm dialog
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = `/entity/categorias/delete/${clientId}`;
+                    }
+                });
+            });
+        });
+    });
+</script>

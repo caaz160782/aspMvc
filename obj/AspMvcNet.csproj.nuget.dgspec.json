@@ -65,6 +65,10 @@
               "target": "Package",
               "version": "[1.6.0, )"
             },
+            "Slugify": {
+              "target": "Package",
+              "version": "[0.1.0.20570, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"

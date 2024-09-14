@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2to35eZFNzU=",
+  "dgSpecHash": "H2jk5A6ZBSs=",
   "success": true,
   "projectFilePath": "/home/antonio/develop/git/net/AspMvcNet/AspMvcNet.csproj",
   "expectedPackageFiles": [
@@ -76,6 +76,7 @@
     "/home/antonio/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/home/antonio/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/home/antonio/.nuget/packages/sixlabors.fonts/1.0.0/sixlabors.fonts.1.0.0.nupkg.sha512",
+    "/home/antonio/.nuget/packages/slugify/0.1.0.20570/slugify.0.1.0.20570.nupkg.sha512",
     "/home/antonio/.nuget/packages/system.appcontext/4.3.0/system.appcontext.4.3.0.nupkg.sha512",
     "/home/antonio/.nuget/packages/system.buffers/4.3.0/system.buffers.4.3.0.nupkg.sha512",
     "/home/antonio/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
@@ -162,5 +163,16 @@
     "/home/antonio/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/home/antonio/.nuget/packages/xlparser/1.5.2/xlparser.1.5.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Slugify 0.1.0.20570' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Slugify",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
