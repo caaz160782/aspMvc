@@ -1,0 +1,30 @@
+@model AspMvcNet.Models.Categoria
+@{ ViewData["Title"] = "Crear Categoria"; }
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a asp-controller="home" asp-action="index">Inicio</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a asp-controller="entity" asp-action="index">Entity</a>
+        </li>
+        <li class="breadcrumb-item">
+            <li> <a  asp-controller="entity" asp-action="CategoriasListar"> Categorias    </a></li>            
+        </li>
+    </ol>
+</nav>  
+<h1> Crear form</h1>
+<div class="row">
+    <div asp-validation-summary="All" class="text-danger"> </div>
+ <form asp-controller="entity" asp-action="CategoriasAdd" method="POST">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" placeholder="Ingresa el Nombre"/>
+        <span asp-validation-for="Nombre" class="text-danger"> </span>
+    </div>
+    <hr/>
+    <button type="submit" class="btn btn-primary ">
+        <i class="fas fas-plus"></i>Crear
+    </button>
+ </form>
+</div>

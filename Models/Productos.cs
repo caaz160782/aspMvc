@@ -24,6 +24,6 @@ public class Producto {
     [Display(Name ="Categoria")]
     [Required(ErrorMessage ="categoria es obligatoria")]
     public int? CategoriaId {get; set;}
-    [ForeignKey("Categoria")]
+    [ForeignKey("CategoriaId")]
     public virtual Categoria? Categoria {get; set;}
 }

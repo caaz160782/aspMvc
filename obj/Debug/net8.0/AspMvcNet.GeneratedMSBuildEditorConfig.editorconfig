@@ -30,6 +30,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50QXBpL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/antonio/develop/git/net/AspMvcNet/Views/Entity/CategoriaEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW50aXR5L0NhdGVnb3JpYUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/antonio/develop/git/net/AspMvcNet/Views/Entity/CategoriasAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW50aXR5L0NhdGVnb3JpYXNBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/antonio/develop/git/net/AspMvcNet/Views/Entity/CategoriasListar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW50aXR5L0NhdGVnb3JpYXNMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/antonio/develop/git/net/AspMvcNet/Views/Entity/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW50aXR5L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/antonio/develop/git/net/AspMvcNet/Views/Error/Error404.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvRXJyb3I0MDQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
