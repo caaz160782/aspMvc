@@ -1,4 +1,4 @@
-@model IEnumerable<AspMvcNet.Models.Categoria>
+@model IEnumerable<AspMvcNet.Models.Producto>
 @{
     ViewData["Title"] = "Entity";
 }
@@ -11,18 +11,19 @@
             <a asp-controller="entity" asp-action="index">Entity</a>
         </li>
         <li class="breadcrumb-item">
-             <a  asp-controller="entity" asp-action="CategoriasListar"> Categorias    </a>            
+            <a  asp-controller="entity" asp-action="CategoriasListar"> Categorias    </a>
         </li>
         <li class="breadcrumb-item">
-            <a  asp-controller="entity" asp-action="ProductosListar">Productos</a>            
+            <a  asp-controller="entity" asp-action="ProductosListar">Productos</a>
         </li>
     </ol>
-</nav>    
+</nav>     
 
+    using DocumentFormat.OpenXml.Office.CustomUI;
 
 
 <div class="text-center">
-    <h2>CategoriasListar</h2>
+    <h2>ProductosListar</h2>
 </div>
  <div class="row"> 
     <p class="d-flex justify-content-end">
@@ -40,8 +41,12 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>CATEGORIA</th>
                 <th>NOMBRE</th>
+                <th>PRECIO</th>
+                <th>STOCK</th>
                 <th>SLUG</th>
+                <th>DESCRIPTION</th>
                 <th>ACCIONES</th>
             </tr>
         </thead>
@@ -49,8 +54,15 @@
             @foreach(var dato in Model){
                  <tr>
                     <td> @dato.Id</td>
+                    <td> @dato.Categoria.Nombre</td>
                     <td> @dato.Nombre</td>
+                    <td> @dato.Precio</td>
+                    <td> @dato.Stock</td>
                     <td> @dato.Slug</td>
+                    <td> @dato.Descripcion.ToString().Substring(0,(dato
+                                                      .Descripcion.Length >10)?10:dato.Descripcion.Length)...
+
+                    </td>
                     <td> <a  asp-controller="entity" asp-action="CategoriaEdit" asp-route-id="@dato.Id">
                          <i class="fas fa-edit"></i>Edit
                         </a>
@@ -70,7 +82,7 @@
     <p>no hay registros</p>
 }
 
-<script>
+@* <script>
     document.addEventListener('DOMContentLoaded', function() {
         const deleteLinks = document.querySelectorAll('.delete-link');
 
@@ -95,4 +107,4 @@
             });
         });
     });
-</script>
+</script> *@

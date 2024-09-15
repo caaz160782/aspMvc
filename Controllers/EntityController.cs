@@ -20,7 +20,7 @@ public class EntityController : Controller
     {
         return View();
     }
-      [Route("/entity/categorias")]
+    [Route("/entity/categorias")]
     public async Task<IActionResult> CategoriasListar()
     {
         return View(await _contexto.Categorias.OrderByDescending(c=>c.Id).ToListAsync());
@@ -107,6 +107,16 @@ public async Task<IActionResult> Delete(int id)
     // Redirigir a la lista de categorías después de eliminar
     return RedirectToAction(nameof(CategoriasAdd));
 }
+[Route("/entity/productos")]
+    public async Task<IActionResult> ProductosListar()
+    {
+        var products =await _contexto
+                            .Productos
+                            .Include(x=>x.Categoria)
+                            .OrderByDescending(c=>c.Id)
+                            .ToListAsync();
+        return View(products);
+    }
 
 
 }
