@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AspMvcNet.Models;
 using AspMvcNet.Data;
+using AspMvcNet.Pagination;
 using Slugify; //dotnet add package Slugify 
 
 namespace AspMvcNet.Controllers;
@@ -116,6 +117,26 @@ public async Task<IActionResult> Delete(int id)
                             .OrderByDescending(c=>c.Id)
                             .ToListAsync();
         return View(products);
+    }
+[Route("/entity/productos-pagination")]
+    public async Task<IActionResult> ProductosPaginacion(string currentFilter, string searchString, int? pageNumber )
+    {
+        if(searchString != null)
+        {
+            pageNumber=1;
+        }else{
+            searchString= currentFilter;
+        }
+      
+      ViewData["CurrentFilter"]=searchString;
+      ViewData["pageNumber"]=pageNumber;
+      //linq
+      var productos = from p in _contexto.Productos select p;
+      productos=productos.OrderByDescending(s => s.Id)
+                         .Include(x => x.Categoria);
+      int pageSize=3;
+      return View(await PaginatedList<Producto>.CreateAsync(productos.AsNoTracking(),pageNumber?? 1 ,pageSize));
+
     }
 
 
