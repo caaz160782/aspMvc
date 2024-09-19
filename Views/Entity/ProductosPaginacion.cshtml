@@ -4,6 +4,7 @@
     var prevDisabled= !Model.HasPreviousPage ? "disabled":"";
     var nextDisabled= !Model.HasNextPage ? "disabled":"";
     var total = Model.TotalPages;
+    var totalPaginacionNumerica = total+1;
 }
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -104,6 +105,19 @@
            last
         </a>
     </li>
+    @for(var i=1; i<@totalPaginacionNumerica; i++)
+    {
+       <li class="page-item">
+        <a 
+           class="page-link"
+           asp-controller="entity" 
+           asp-action="ProductosPaginacion"           
+           asp-route-pageNumber="@i"           
+        >
+           @i
+        </a>
+    </li>   
+    }
     <li class="page-item">
         <a class="page-link btn btn-default @nextDisabled"
            asp-controller="entity" 
