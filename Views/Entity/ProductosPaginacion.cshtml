@@ -5,6 +5,7 @@
     var nextDisabled= !Model.HasNextPage ? "disabled":"";
     var total = Model.TotalPages;
     var totalPaginacionNumerica = total+1;
+    var pageNumber= ViewData["pageNumber"];
 }
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -107,7 +108,7 @@
     </li>
     @for(var i=1; i<@totalPaginacionNumerica; i++)
     {
-       <li class="page-item">
+       <li class="page-item @(((int?)pageNumber ?? 0) == i ? "active" : "")">
         <a 
            class="page-link"
            asp-controller="entity" 
